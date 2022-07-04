@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+
+	<p id="demo" name="pName"></p>
+	
+	<script type="text/javascript">
+	/*
+		HTML 요소에 접근하는 가장 일반적인 방법은
+		id값으로 접근을 한다.
+		
+		innerHTML : 요소의 내용을 가져오는 가장 쉬운 방법
+		가져오거나 변경하는데 사용할 수 있다.
+		
+		HTML 요소 찾기
+		document.getElementById(id)
+		document.getElementsByTagName(name)
+		document.getElementsByClassName(name)
+		
+		요소 변경
+		let element = document.getElementById(id)
+		element.innerHTML = new htmlcontent // 생성, 변경
+		element.attribute = new value // 생성, 변경
+		element.style.property = new style
+		element.setAttribute(attribute, value)
+		
+		요소 추가 및 삭제
+		document.createElement(element)  // HTML 생성
+		document.removeChild(element) //  Remove HTML
+		document.appendChild(element)  //  Add HTML
+		document.replaceChild(new, old) // Replace HTML
+		document.write(text) // HTML output stream
+		
+		이벤트 핸들러 추가
+		document.getElementById(id).onclick = function() { code... }
+	*/
+		document.getElementById("demo").innerHTML = "Hello World!";
+	</script>
+</body>
+</html>

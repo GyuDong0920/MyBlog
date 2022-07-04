@@ -1,0 +1,50 @@
+server:
+  port: 9090
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog1?serverTime=Asia/Seoul
+    username: ten
+    password: 1q2w3e4r5t!
+    hikari: 
+      connectionTimeout: 30000
+      maximumPoolSize: 10
+      maxLifetime: 1800000
+      poolName: HikariCP
+      readOnly: false
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+      
+  security:
+    user:
+      name: test
+      password: 1234
+      
+tenco:
+  key: 25C18C1ED58157A457C41FBBCFD4A2B554648395F99C3FE5DC043C03FF6FEC54EBE2ADFA517897AD4B1C38D9234571C335AFE244D8D686F0F9B69E22BB6B6B30
+  
