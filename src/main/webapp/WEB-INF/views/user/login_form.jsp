@@ -1,9 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ include file="../layout/header.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="../layout/header.jsp" %>
 
 <div class="container">
 <!-- loginProc를 만들지 않음 (스프링 시큐리티가 가로채서 진행) -->
 <form action="/auth/loginProc" method="post">
-	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+ <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">	  
     <div class="form-group">
       <label for="username">username:</label>
       <input type="text" class="form-control" name="username" value="tenco" placeholder="Enter username" id="username" />

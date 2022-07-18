@@ -9,6 +9,7 @@ import com.example.tencoding.blog.model.RoleType;
 import com.example.tencoding.blog.model.User;
 import com.example.tencoding.blog.repository.UserRepository;
 
+
 @Service // IoC 등록
 public class UserService {
 	

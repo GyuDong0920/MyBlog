@@ -56,6 +56,7 @@ public class UserController {
 	
 	@GetMapping("/auth/join_form")
 	public String joinForm() {
+		
 		return "user/join_form";
 	}	
 	

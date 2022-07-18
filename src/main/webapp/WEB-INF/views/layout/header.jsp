@@ -4,7 +4,7 @@
 <sec:authorize access="isAuthenticated()">
     <sec:authentication property="principal" var="principal"/>
 </sec:authorize>
-
+  
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,11 +23,13 @@
     <!-- include summernote css/js -->
 	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
   </head>
   <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
       <!-- Brand -->
       <a class="navbar-brand" href="/">블로그</a>
+      
 
       <!-- Toggler/collapsibe Button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -60,9 +62,23 @@
               </li>
             </c:otherwise>
           </c:choose>
+           <li class="nav-item dropdown">
+           		<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+           			STORY	
+           		</a>
+           		<ul class="dropdown-menu">
+           			<li class="">
+           				<a href="/story/home" class="dropdown-item">
+           				  <i class="fas fa-cloud">&nbsp;&nbsp;SHOW STORY</i>
+           				</a>
+           				
+           				<a href="/story/upload" class="dropdown-item">
+           				  <i class="fas fa-file">&nbsp;&nbsp;UPLOAD</i>
+           				</a>
+           			</li>
+           		</ul>
+           </li>
         </ul>
       </div>
     </nav>
-    <br />
     <!-- 자바 스크립트 추가할 때는 그 페이지의 밑에 작성 -->
-  </body>

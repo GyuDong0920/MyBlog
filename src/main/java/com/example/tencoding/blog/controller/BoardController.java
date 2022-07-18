@@ -1,5 +1,6 @@
 package com.example.tencoding.blog.controller;
 
+
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,7 +73,7 @@ public class BoardController {
 	
 	@GetMapping("/board/save_form")
 	public String saveForm() {
-		log.info("saveForm 메서드 호출");
+		
 		return "/board/save_form";
 	}
 	
